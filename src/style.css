@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 0.5rem 1rem black;
+}
+nav{
+    padding-left: 20rem;
+}
+
+#titulo{
+    margin: auto;
+    padding-left: 35rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    text-decoration: solid;
+    color: rgb(228, 210, 48);
+    text-shadow: 0 0.1rem 0.3rem black;
+}
+
+a{
+    text-decoration: none;
+    color: beige;
+    padding: 0 1rem;
+    font-family: sans-serif;
+}
+a:hover{
+    text-shadow: 0 0.3rem 0.3rem black;
+}
+#boton{
+    float: left;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+#parrafo{
+    float: left;
+    margin: 1rem;
+}
+#onAdd{
+    display: flex;
+    align-items: center;
+    background-color: gainsboro;
+    box-shadow: 0 0.5rem 1rem black;
+    margin:0 50rem 0 50rem;
+    border: solid gray;
+    flex-direction: column;
+}
+#tituloProducto{
+    padding-top: 0.5rem;
+
+}
+#botonCarrito{
+    width: 8.5rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    color: blue;
+    border: 0.1rem solid blue;
+    border-radius: 0.3rem;
+}
+#botonCarrito:hover{
+    box-shadow: 0 0.3rem 0.3rem black;
+}
+
+#imagenes{
+    width: 60%;
+    margin: 3rem;
+}
+#productConteiner{
+    width: 40%;
+    margin: auto;
+    margin-top: 2rem;
+    border: 0.1rem solid brown;
+    box-shadow: 0 0.5rem 1rem black;
+    background-color: rgb(238, 231, 231);
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#productConteiner:hover{
+    width: 41%;
+    margin: auto;
+    margin-top: 2rem;
+    border: 0.1rem solid brown;
+    box-shadow: 0 0.5rem 1rem black;
+    background-color: rgba(238, 231, 231, 0.24);
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#tittleProduct{
+    margin-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 0 0.1rem 0.3rem black;
+}
+#desProduct{
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0.05rem 0.1rem black;
+}
+#butDetalle{
+    font-size: 1.3rem;
+    width: 10rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+
+.logoCargando{
+    font-size: 30rem;
+    text-align: center;
+}
