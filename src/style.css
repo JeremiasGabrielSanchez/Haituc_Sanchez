@@ -82,7 +82,7 @@ a:hover{
     margin-top: 2rem;
     border: 0.1rem solid brown;
     box-shadow: 0 0.5rem 1rem black;
-    background-color: rgb(238, 231, 231);
+    background-color: rgb(231, 214, 214);
     display: block;
     text-align: center;
     align-items: center;
@@ -94,7 +94,7 @@ a:hover{
     margin-top: 2rem;
     border: 0.1rem solid brown;
     box-shadow: 0 0.5rem 1rem black;
-    background-color: rgba(238, 231, 231, 0.24);
+    background-color: rgb(231, 214, 214, 0.815);
     display: block;
     text-align: center;
     align-items: center;
@@ -111,7 +111,7 @@ a:hover{
     font-size: 1.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0.05rem 0.1rem black;
+    text-shadow: 0 0.05rem 0.2rem black;
 }
 #butDetalle{
     font-size: 1.3rem;
@@ -125,3 +125,93 @@ a:hover{
     font-size: 30rem;
     text-align: center;
 }
+
+/*------------------------------ Detalle del producto -------------------------------------*/
+.body{
+    background-color: gray;
+}
+.productImgConteiner{
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem black;
+    display: flex;
+    width: 98%;
+    border: solid rgb(236, 236, 236);
+    border-radius: 0.5rem;
+    margin: 2rem auto 2rem auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenesDetail{
+    width: 50%;
+    padding: 1rem 2rem 0rem 1rem;
+}
+
+.detailConteiner{
+    display: block;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 0.2rem 0.2rem black;
+    border: 0.15rem solid rgb(185, 185, 185);
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.tittleDetail{
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 0 0.1rem 0.3rem black;
+}
+
+.ProductDetail{
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 0 0.05rem 0.2rem black;
+}
+
+.productPrice{
+    width: 7rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: solid green;
+    background-color: rgba(106, 255, 106, 0.24);
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0.05rem 0.1rem black;
+}
+
+.butCarrito{
+    display: block;
+    width: 80%;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: solid  rgb(49, 49, 240);
+    background-color:  rgba(90, 90, 253, 0.432);
+    margin: 2rem auto 2rem auto;
+    font-size: 2rem;
+    color: rgb(49, 49, 240);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0.05rem 0.1rem black;
+}
+.butCarrito:hover{
+    display: block;
+    width: 80%;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: solid  rgba(49, 49, 240, 0.562);
+    background-color:  rgba(90, 90, 253, 0.308);
+    margin: 2rem auto 2rem auto;
+    font-size: 2rem;
+    color: rgba(49, 49, 240, 0.562);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0.05rem 0.1rem black;
+    cursor: pointer;
+}
+

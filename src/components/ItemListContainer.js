@@ -16,13 +16,11 @@ const ItemListContainer = ({greeting}) => {
         setListProducts(data)})
   }, [])
 
-  console.log(listProducts)
-
   return (
     <>
       <h1>{greeting}</h1>
       <div className="logoCargando">{!loading && <ImSpinner4/>}</div>
-      {loading && <ItemList listProducts={listProducts}/>}
+      <ItemList listProducts={listProducts}/>
     </>
   )
 }
