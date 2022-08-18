@@ -1,6 +1,13 @@
+import ItemCount from "./ItemCount"
+import { useState } from "react"
+import {NavLink} from "react-router-dom";
 
 const ItemDetail = ({listProduct}) => {
 
+    const [isAdded, setIsAdded] = useState(false)
+    const onAdd = () => {
+        setIsAdded(true)
+    }
     return(
         <>
             <div className="productImgConteiner">
@@ -9,7 +16,15 @@ const ItemDetail = ({listProduct}) => {
                     <h1 className="tittleDetail">{listProduct.product}</h1>
                     <p className="ProductDetail">{listProduct.description}</p>
                     <p className="productPrice"> ${listProduct.price} </p>
-                    <button className="butCarrito" onClick={()=>{console.log("carrito")}}>Agregar al Carrito</button>
+                    {
+                        isAdded ? 
+                        <NavLink to={"/cart"}> 
+                            <button className="butCarrito">Ir al carrito</button> 
+                        </NavLink>
+                        :
+                        <ItemCount initial={1} stock={listProduct.stock} onAdd={onAdd}/>
+                    }
+                    
                 </div>
             </div>
         </>
