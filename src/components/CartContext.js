@@ -48,3 +48,5 @@ export function CartContextProvider({children}){
         </CartContext.Provider>
     )
 }
+
+export default CartContextProvider
