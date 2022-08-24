@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy } from "react"
+import { useState} from "react"
 import { BiPlusCircle } from 'react-icons/bi'
 import { BiMinusCircle } from 'react-icons/bi'
 
@@ -15,11 +15,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
         setContador(contador - 1)}
     }
     
-    const confirmar = () => {
-        if(contador <= stock && contador !== 0){
-            alert("Se agrego al carrito " + contador)
-        }        
-    }
+    // const confirmar = () => {
+    //     if(contador <= stock && contador !== 0){
+    //         alert("Se agrego al carrito " + contador)
+    //     }        
+    // }
     
 
     return (      
@@ -29,7 +29,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p id="parrafo">{contador}</p>
                 <button id="boton" onClick={sumar}><BiPlusCircle/></button>
             {/* </div> */}
-            <button className="butCarrito" onClick={onAdd}>Agregar al carrito</button>
+            <button className="butCarrito" onClick={() => onAdd(contador)}>Agregar al carrito</button>
         </div>
     )
 

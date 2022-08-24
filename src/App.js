@@ -2,8 +2,10 @@ import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailConteiner from "./components/ItemDetailConteiner";
 import Cart from "./components/Cart";
+import { useCartContext } from "./CartContext";
 import "./style.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App(){
     return (

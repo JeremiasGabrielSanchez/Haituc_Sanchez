@@ -1,13 +1,19 @@
 import ItemCount from "./ItemCount"
 import { useState } from "react"
 import {NavLink} from "react-router-dom";
+import { useCartContext } from "./CartContext";
 
 const ItemDetail = ({listProduct}) => {
 
     const [isAdded, setIsAdded] = useState(false)
-    const onAdd = () => {
+
+    const {addToCard, cartList} = useCartContext()
+
+    const onAdd = (quantity) => {
+        addToCard(listProduct, quantity)
         setIsAdded(true)
-    }
+    }   
+    console.log(cartList)
     return(
         <>
             <div className="productImgConteiner">
