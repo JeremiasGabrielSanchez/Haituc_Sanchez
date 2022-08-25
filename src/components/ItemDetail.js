@@ -13,7 +13,7 @@ const ItemDetail = ({listProduct}) => {
         addToCard(listProduct, quantity)
         setIsAdded(true)
     }   
-    console.log(cartList)
+                                            console.log(cartList)
     return(
         <>
             <div className="productImgConteiner">

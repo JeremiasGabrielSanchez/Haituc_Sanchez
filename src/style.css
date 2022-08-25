@@ -14,7 +14,8 @@ header{
     box-shadow: 0 0.5rem 1rem black;
 }
 nav{
-    padding-left: 20rem;
+    padding-left: 9rem;
+    margin-top: 1rem;
 }
 
 #titulo{
@@ -35,9 +36,16 @@ a{
     padding: 0 1rem;
     font-family: sans-serif;
 }
+
 a:hover{
     text-shadow: 0 0.3rem 0.3rem black;
 }
+
+.cartWidget{
+    display: block;
+    margin-left: 25rem;
+}
+
 #boton{
     float: left;
     width: 2rem;
@@ -218,3 +226,92 @@ a:hover{
     cursor: pointer;
 }
 
+/*-------------------------------------------------Contenedor Carrito--------------------------------------------------------*/
+
+.contCart{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    box-shadow: 0 0.2rem 0.2rem black;
+    border: solid black;
+    border-radius: 0.5rem;
+    background-color: white;
+    height: 15rem;
+    width: 50rem;
+    padding: 1rem
+}
+
+.imgCart{
+    /* width: 25%; */
+    margin: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+.tittleCart{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding-top: 3.4rem;
+    padding-bottom: 1rem;
+}
+
+.quantity{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+.butRemove{
+    height: 15%;
+    width: 5%;
+    border: solid brown;
+    background-color: rgb(252, 121, 121);
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0.5rem;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+}
+
+.butRemove:hover{cursor: pointer;}
+
+.contTotal{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(228, 210, 48);
+    text-shadow: 0 0.05rem 0.1rem black;
+    background-color: rgb(42, 165, 89);
+    border: 0.1rem solid black;
+}
+
+.tittleCartVacio{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    margin-top: 8rem;
+}
+
+.vaciarCart{
+    display: block;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: brown;
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 4rem;
+    margin: 1rem auto 2rem auto;
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+
+.vaciarCart:hover{
+    display: block;  
+    cursor: pointer;
+    width: 21rem;
+    height: 5rem;
+    background-color: rgba(165, 42, 42, 0.747);
+    box-shadow: 0 0.5rem 0.8rem black;
+}
+
+.cantidadCart{
+    
+}
