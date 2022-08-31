@@ -1,10 +1,9 @@
 import ItemDetail from "./ItemDetail"
-import { products } from "../assets/productos"
 import { useState, useEffect } from "react"
-import { ImSpinner4 } from 'react-icons/im'
-import { customFetch } from "../assets/customFetch"
 import { useParams } from "react-router-dom"
-
+import { db } from "../assets/ItemCollection";
+import { ImSpinner4 } from 'react-icons/im';
+import {collection, getDocs} from "firebase/firestore";
 const ItemDetailConteiner = () => {
     
     const[listProduct, setListProduct] = useState({})
@@ -12,12 +11,20 @@ const ItemDetailConteiner = () => {
     const { id } = useParams()
 
     useEffect(()=>{
-        customFetch(products)
-        .then(res => {
+        const productsCollection = collection(db, "Products")
+        const consulta = getDocs(productsCollection)
+
+        consulta
+        .then(snapshot => {const prod = snapshot.docs.map(doc => {
+            return {
+                ...doc.data(),
+                id: doc.id
+                }      
+            })
             setLoading(true)
-            setListProduct(res.find(item => item.id === id))
+            setListProduct(prod.find(item => item.id === id))
         })
-    }, [])
+    }, [id])
 
     return(
         <>

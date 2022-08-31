@@ -1,28 +1,49 @@
-import { customFetch } from "../assets/customFetch"
 import { useState, useEffect } from "react"
-import { products } from "../assets/productos"
 import { ImSpinner4 } from 'react-icons/im';
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 
-const ItemListContainer = ({greeting}) => {
+import { db } from "../assets/ItemCollection";
+import {collection, getDocs} from "firebase/firestore";
 
+
+const ItemListContainer = ({greeting}) => {
+  
   const [listProducts, setListProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const { category } = useParams("/")
-
+  
   useEffect(() => {
+    
     setLoading(false)
-    customFetch(products)
-      .then(data => {
+    const productsCollection = collection(db, "Products")
+    const consulta = getDocs(productsCollection)
+
+    consulta
+      .then(snapshot => {
           if (category) {
             setLoading(true)
-            setListProducts(data.filter(producto => producto.category === category))           
+
+            const prod = snapshot.docs.map(doc => {
+              return {
+                ...doc.data(),
+                id: doc.id
+              }      
+            })
+            setListProducts(prod.filter(producto => producto.category === category))         
           }else{
             setLoading(true)
-            setListProducts(data)
+
+            const prod = snapshot.docs.map(doc => {
+              return {
+                ...doc.data(),
+                id: doc.id
+              }      
+            })
+            setListProducts(prod)
           }
         })
+    .catch(err => {console.log(err)})
   }, [category])
 
   return (
