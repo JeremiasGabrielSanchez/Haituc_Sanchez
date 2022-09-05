@@ -1,10 +1,11 @@
 import { useCartContext } from "./CartContext";
 import { MdCancel } from 'react-icons/md';
+import Usuario from "./usuario";
 
 const Cart = () => {
-
-    const {totalPrice, cartList, removeProduct, cleanCart} = useCartContext()
     
+    const {totalPrice, cartList, removeProduct, cleanCart} = useCartContext()   
+
     return (
         <>
         {cartList.map(prod => 
@@ -25,6 +26,7 @@ const Cart = () => {
                 <h2> Total: ${totalPrice()}</h2>
             </div>
             <button className="vaciarCart" onClick={cleanCart}> Vaciar Carrito </button>
+            <Usuario/>
             </>
         }
         </>

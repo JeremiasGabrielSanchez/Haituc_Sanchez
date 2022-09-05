@@ -312,6 +312,69 @@ a:hover{
     box-shadow: 0 0.5rem 0.8rem black;
 }
 
-.cantidadCart{
-    
+/* ----------------------- Orden Compra ---------------------------*/
+
+.ordenCompra{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+input{
+    height: 2rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    margin-right: 0.3rem;
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+
+.btnCompra{
+    display: block;
+    margin: 1rem auto 0rem auto;
+    width: 13rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+
+.btnCompra:hover{
+    cursor: pointer;
+    width: 14rem;
+    padding: 0.8rem;
+    box-shadow: 0 0.5rem 0.8rem black;
+}
+.ordenTittle{
+    margin-right: 2rem;
+    margin-top: 0.57%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.idCompra{
+    margin-top: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnClean{
+    display: block;
+    margin: 1rem auto 0rem auto;
+    width: 13rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+
+.btnClean:hover{
+    cursor: pointer;
+    width: 14rem;
+    padding: 0.8rem;
+    box-shadow: 0 0.5rem 0.8rem black;
 }
