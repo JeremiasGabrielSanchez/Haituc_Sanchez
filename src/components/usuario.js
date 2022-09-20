@@ -6,8 +6,8 @@ import {NavLink} from "react-router-dom";
 import Page from "./Page";
 import List from "./List";
 
+// const usuariosCollection = collection(db, "usuario")
 const Usuario = () => {
-    const usuariosCollection = collection(db, "usuario")
     const {cartList, totalPrice, cleanCart} = useCartContext()
 
     const [nombre, setNombre] = useState("")
@@ -16,7 +16,7 @@ const Usuario = () => {
     const [celular, setCelular] = useState("")
     const [ordenCompra, setOrdenCompra] = useState("")
     const [btn, setBtn] = useState(false)
-    const [usuario, setUsuario] = useState([])
+    const usuario = []
 
     const nombreCompleto = `${nombre} ${apellido}`
 
@@ -46,7 +46,6 @@ const Usuario = () => {
                 alert(`Completa todos los campos`)
             }else if(celular.length === 10){
             const orden = {
-                // items:`${cartList.map(item => (item.id, item.product, item.price))}`,
                 items: {
                     id: cartList.map(item => item.id),
                     tittle: cartList.map(item => item.product),
