@@ -4,7 +4,7 @@
 
 ## Uso
 
-    Para poder utilizarlo se necesita clonar el repositorio. Para ello descargaremos el repositorio .zip, luego crearemos una aplicacion de react. En la carpeta donde hayamos guardado dicha app, extraeremos y reemplazaremos los archivos correspondientes. 
+    Para poder utilizarlo se necesita clonar el repositorio. Para ello descargaremos dicho repositorio en formato .zip. Como segundo paso crearemos una aplicacion de React y en la carpeta donde la hayamos guardado, vamos a extraer el archivo.zip y reemplazaremos las carpetas y archivos correspondientes. 
     Ahora falta instalar las siguientes librerias
 
 1. React-Router-Dom:
