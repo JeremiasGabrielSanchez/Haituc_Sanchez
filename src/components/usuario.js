@@ -13,6 +13,7 @@ const Usuario = () => {
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [email, setEmail] = useState("")
+    const [email2, setEmail2] = useState("")
     const [celular, setCelular] = useState("")
     const [ordenCompra, setOrdenCompra] = useState("")
     const [btn, setBtn] = useState(false)
@@ -35,6 +36,11 @@ const Usuario = () => {
         setEmail(e.target.value)
     }
 
+    const handleChangeEmail2 = (e) => {
+        e.preventDefault()
+        setEmail2(e.target.value)
+    }
+
     const handleChangeCelular = (e) => {
         e.preventDefault()
         setCelular(e.target.value)
@@ -44,7 +50,7 @@ const Usuario = () => {
 
             if(nombre === "" || apellido==="" || email === "" || celular === ""){
                 alert(`Completa todos los campos`)
-            }else if(celular.length === 10){
+            }else if(celular.length === 10 && email === email2){
             const orden = {
                 items: {
                     id: cartList.map(item => item.id),
@@ -55,6 +61,7 @@ const Usuario = () => {
                     name: nombreCompleto,
                     phone:celular,
                     email: email,
+                    email2: email2
                 },
                 total: totalPrice(),
                 date: serverTimestamp()
@@ -72,7 +79,7 @@ const Usuario = () => {
                 setBtn(true)
                 
             }else{
-                alert(`Numero de celular incorrecto`)
+                alert(`Numero de celular o Email incorrecto`)
             } 
             console.log(btn)
         }
@@ -83,6 +90,7 @@ const Usuario = () => {
             <input type="text" placeholder="Nombre" onChange={handleChangeNombre} value={nombre}/> 
             <input type="text" placeholder="Apellido" onChange={handleChangeApellido} value={apellido}/>
             <input type="email" placeholder="Correo electronico" onChange={handleChangeEmail} value={email}/>
+            <input type="email" placeholder="Reescriba su correo" onChange={handleChangeEmail2} value={email2}/>
             <input type="number" placeholder="Celular" onChange={handleChangeCelular} value={celular} />
             </div>}
             {!btn && <button className="btnCompra" onClick={handleConfirm}>Confirmar Compra</button>}           
