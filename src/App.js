@@ -6,7 +6,6 @@ import CartContextProvider  from "./components/CartContext";
 import "./style.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 function App(){
     return (
         <CartContextProvider>

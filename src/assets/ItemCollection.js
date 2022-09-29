@@ -1,13 +1,14 @@
+
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBPK_cwb8p0wNT2Hd7jllalGofZ_FA_xo4",
-    authDomain: "ecommers-coder.firebaseapp.com",
-    projectId: "ecommers-coder",
-    storageBucket: "ecommers-coder.appspot.com",
-    messagingSenderId: "396638462022",
-    appId: "1:396638462022:web:9b1f45e3c93d89a0b3ea47"
+  apiKey: "AIzaSyAld6Wr_deWIkxZGhK5fi8LzguVI2_8EmU",
+  authDomain: "e-commers-haituc.firebaseapp.com",
+  projectId: "e-commers-haituc",
+  storageBucket: "e-commers-haituc.appspot.com",
+  messagingSenderId: "173330136599",
+  appId: "1:173330136599:web:39829df65d105d23402652"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -40,5 +40,5 @@ npm install firebase
 
 ## Build
 
-Link: https://ornate-fox-2f2a80.netlify.app/
+Link: https://singular-kulfi-7db477.netlify.app
 

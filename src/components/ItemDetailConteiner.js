@@ -30,7 +30,6 @@ const ItemDetailConteiner = () => {
         <>
         <div className="logoCargando">{!loading && <ImSpinner4/>}</div>
         {loading && <ItemDetail listProduct={listProduct}/>}
-        {/* {!loading ? <ItemDetail listProduct={listProduct}/> : <ImSpinner4/>} */}
         </>
     )
 }
