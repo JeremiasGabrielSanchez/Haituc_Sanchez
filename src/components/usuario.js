@@ -6,7 +6,6 @@ import {NavLink} from "react-router-dom";
 import Page from "./Page";
 import List from "./List";
 
-// const usuariosCollection = collection(db, "usuario")
 const Usuario = () => {
     const {cartList, totalPrice, cleanCart} = useCartContext()
 
